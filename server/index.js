@@ -26,9 +26,9 @@ app.use('/images', express.static('images'));
 
 
 dotenv.config();
-const PORT = 5000;
+const PORT = process.env.PORT;
 
-const CONNECTION = "mongodb://localhost:27017/finalproject";
+const CONNECTION = process.env.MONGODB_CONNECTION;
 mongoose
   .connect(CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Listening at Port ${PORT}`)))
