@@ -6,7 +6,7 @@
   --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
   --hrColor: #cfcdcd;
   --cardColor: rgba(255, 255, 255, 0.64);
-  --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+  --buttonBg: white;
   --inputColor: rgba(40, 52, 62, 0.07);
   --photo: #4CB256;
   --video: #4A4EB7;
@@ -17,18 +17,8 @@
 .App {
   overflow: hidden;
   color: var(--black);
-  background: #f3f3f3;
+  background: #000000;
   padding: 1rem 1rem;
-}
-
-/* blur */
-.blur {
-  position: absolute;
-  width: 22rem;
-  height: 14rem;
-  border-radius: 50%;
-  background: #a6ddf0;
-  filter: blur(72px);
 }
 
 .button {
@@ -43,8 +33,8 @@
 }
 
 .button:hover {
-  color: var(--orange);
-  border: 2px solid var(--orange);
+  color: white;
+  border: 2px solid white;
   cursor: pointer;
   background: transparent;
 }
@@ -68,6 +58,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  color: white;
 }
 
 .infoInput{
@@ -90,4 +81,5 @@
   width: 6rem;
   height: 2rem;
   align-self: flex-end;
+  color: black
 }

@@ -56,8 +56,7 @@ const Auth = () => {
         <img src={Logo} alt="" />
 
         <div className="Webname">
-          <h1>ZKC Media</h1>
-          <h6>Explore the ideas throughout the world</h6>
+          <h1>MinimalMessaging</h1>
         </div>
       </div>
 
@@ -139,6 +138,7 @@ const Auth = () => {
                 fontSize: "12px",
                 cursor: "pointer",
                 textDecoration: "underline",
+                color: "white"
               }}
               onClick={() => {
                 resetForm();

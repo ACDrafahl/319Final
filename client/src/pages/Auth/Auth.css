@@ -13,8 +13,6 @@
   justify-content: center;
 }
 
-
-
 /* left side */
 .a-left{
     gap: 2rem;
@@ -27,11 +25,8 @@
 
 .Webname > h1 {
     font-size: 3rem;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
   
-    /* Create the gradient. */
-    background-image: var(--buttonBg);
-    
     /* Set the background size and repeat properties. */
     background-size: 100%;
     background-repeat: repeat;
@@ -54,9 +49,10 @@
 
 
 .authForm{
-    background-color: var(--cardColor);
+    background-color: #000000;
     border-radius: 1rem;
     padding: 1rem;
+    border: 3px solid #ffffff;
 }
 
 .authForm>div{
