@@ -58,23 +58,22 @@ const InfoCard = () => {
       </div>
 
       <div className="info">
-        {/* */}
-        <span>
+        <span style={{ color: "lightgray" }}>
           <b>Status </b>
         </span>
-        <span>{profileUser.relationship}</span>
+        <span style={{ color: "lightgray" }}>{profileUser.relationship}</span>
       </div>
       <div className="info">
-        <span>
+        <span style={{ color: "lightgray" }}>
           <b>Lives in </b>
         </span>
-        <span>{profileUser.livesIn}</span>
+        <span style={{ color: "lightgray" }}>{profileUser.livesIn}</span>
       </div>
       <div className="info">
-        <span>
-          <b>Works at </b>
+        <span style={{ color: "lightgray" }}>
+          <b>Phone #: </b>
         </span>
-        <span>{profileUser.worksAt}</span>
+        <span style={{ color: "lightgray" }}>{profileUser.worksAt}</span>
       </div>
 
       <button className="button logout-button" onClick={handleLogOut}>Log Out</button>
