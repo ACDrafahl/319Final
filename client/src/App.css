@@ -32,6 +32,13 @@
   transition: all 100ms ease-out;
 }
 
+.custom-send-button {
+  background: white;
+  color: black;  /* To maintain text color */
+  padding: 0.5rem 1rem;  /* Optional: Adjust padding or other styles */
+  border-radius: 1rem;  /* Optional: Custom border radius */
+}
+
 .button:hover {
   color: white;
   border: 2px solid white;

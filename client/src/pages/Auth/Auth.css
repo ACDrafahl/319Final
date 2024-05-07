@@ -30,6 +30,13 @@
   color: #ffffff;
 }
 
+.CompanyName {
+  font-size: .8rem;
+  font-family: 'Arial', sans-serif;
+  font-weight: 50 !important; /* Force a thin font */
+  color: white;
+}
+
 .Webname>h6{
     font-size: 0.85rem;
 }

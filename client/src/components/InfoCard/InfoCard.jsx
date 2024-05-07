@@ -59,13 +59,19 @@ const InfoCard = () => {
 
       <div className="info">
         <span style={{ color: "lightgray" }}>
-          <b>Status </b>
+          <b>Name: </b>
+        </span>
+        <span style={{ color: "lightgray" }}>{user.firstname} {user.lastname}</span>
+      </div>
+      <div className="info">
+        <span style={{ color: "lightgray" }}>
+          <b>Status: </b>
         </span>
         <span style={{ color: "lightgray" }}>{profileUser.relationship}</span>
       </div>
       <div className="info">
         <span style={{ color: "lightgray" }}>
-          <b>Lives in </b>
+          <b>Lives in: </b>
         </span>
         <span style={{ color: "lightgray" }}>{profileUser.livesIn}</span>
       </div>
