@@ -99,17 +99,26 @@ export const updateUser = async (req, res) => {
 export const deleteUser = async (req, res) => {
   const id = req.params.id;
 
-  const { currentUserId, currentUserAdmin } = req.body;
+  // Extracting user ID from authentication middleware
+  const currentUserId = req.params.id;
 
-  if (currentUserId == id || currentUserAdmin) {
-    try {
-      await UserModel.findByIdAndDelete(id);
-      res.status(200).json("User Deleted Successfully!");
-    } catch (error) {
-      res.status(500).json(error);
+  try {
+    // Fetch user information to check for admin status
+    const currentUser = await UserModel.findById(currentUserId);
+
+    if (!currentUser) {
+      return res.status(404).json("User not found");
     }
-  } else {
-    res.status(403).json("Access Denied!");
+
+    // Check if the current user is an admin or owner of the account
+    if (currentUser._id.toString() === id || currentUser.isAdmin) {
+      await UserModel.findByIdAndDelete(id);
+      return res.status(200).json("User Deleted Successfully!");
+    } else {
+      return res.status(403).json("Access Denied!");
+    }
+  } catch (error) {
+    return res.status(500).json(error);
   }
 };
 

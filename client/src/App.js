@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={user ? <Navigate to="home" /> : <Navigate to="auth" />}
+          element={user ? <Navigate to="../chat" /> : <Navigate to="auth" />}
         />
         <Route
           path="/home"
@@ -30,7 +30,7 @@ function App() {
         />
         <Route
           path="/auth"
-          element={user ? <Navigate to="../home" /> : <Auth />}
+          element={user ? <Navigate to="../chat" /> : <Auth />}
         />
         <Route
           path="/profile/:id"
