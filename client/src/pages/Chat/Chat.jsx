@@ -10,6 +10,9 @@ import { userChats } from "../../api/ChatRequests";
 import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
 import axios from 'axios';
+import InfoCard from '../../components/InfoCard/InfoCard'
+import { UilPen } from "@iconscout/react-unicons";
+import ProfileModal from "../../components/ProfileModal/ProfileModal";
 
 // Define the Chat component
 const Chat = () => {
@@ -123,6 +126,7 @@ const Chat = () => {
         </div>
       </div>
 
+
       {/* Right Side */}
       <div className="Right-side-chat">
         <div style={{ width: "20rem", alignSelf: "flex-end" }}>
@@ -131,11 +135,13 @@ const Chat = () => {
         <ChatBox
           chat={currentChat}
           currentUser={user._id}
-          setSendMessage={setSendMessage}
+          setSendMessage={setSendMessage} 
           receivedMessage={receivedMessage}
         />
-      </div>
+      </div>   
     </div>
+
+
   );
 };
 

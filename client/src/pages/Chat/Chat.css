@@ -5,6 +5,28 @@
   gap: 1rem;
 }
 
+/* .Home-center {
+  position: relative;
+  display: flex;
+  grid-template-columns: 22% auto;
+  gap: 1rem;
+} */
+
+.Home-center {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Ensures it covers the full height of the viewport */
+  background-color: black;  /* Black background stretching across the entire page */
+  gap: 1rem;
+}
+
+.Header-container {
+  display: flex;
+  justify-content: space-between;  /* Align elements across */
+  gap: 1rem;  /* Optional: Spacing between LogoSearch and NavIcons */
+}
+
+
 .Left-side-chat {
   display: flex;
   flex-direction: column;
@@ -24,7 +46,7 @@
   overflow: scroll;
   color: white;
   background-color: black;
-  outline: 2px solid white;
+  outline: 3px solid white;
 }
 
 .Chat-list {

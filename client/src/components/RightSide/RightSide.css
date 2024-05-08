@@ -10,7 +10,7 @@
     display: flex;
     justify-content: flex-end; /* Align icons to the right */
     gap: 1rem; /* Add a consistent distance between icons */
-  }
+}
 
 .navIcons>a>img{
     width: 3rem;

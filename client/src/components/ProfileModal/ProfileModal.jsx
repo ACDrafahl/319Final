@@ -109,25 +109,15 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
 
         <div>
           <input
-            value={formData.livesIn}
+            value={formData.username}
             onChange={handleChange}
             type="text"
-            placeholder="Lives in"
+            placeholder="Username"
             name="livesIn"
             className="infoInput"
           />
         </div>
 
-        <div>
-          <input
-            value={formData.relationship}
-            onChange={handleChange}
-            type="text"
-            className="infoInput"
-            placeholder="Relationship status"
-            name="relationship"
-          />
-        </div>
 
         <button className="button infoButton" type="submit">
           Update

@@ -4,7 +4,7 @@
     display: grid;
     grid-template-rows: 14vh 60vh 13vh;
     background-color: black;
-    outline: 2px solid white;
+    outline: 3px solid white;
 }
 
 .chat-header {

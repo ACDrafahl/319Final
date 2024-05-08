@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./InfoCard.css";
-import { UilPen } from "@iconscout/react-unicons";
-import ProfileModal from "../ProfileModal/ProfileModal";
+import ProfileModal from "../ProfileModal/ProfileModal.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import * as UserApi from "../../api/UserRequests.js";
-import { logout } from "../../actions/AuthActions";
+import { logout } from "../../actions/AuthActions.js";
+import Michael from "../../img/Michael.jpg";
+import Andy from "../../img/Andy.jpg";
 
 
-const InfoCard = () => {
+const ProjectInfo = () => {
   const dispatch = useDispatch()
   const params = useParams();
   const [modalOpened, setModalOpened] = useState(false);
@@ -39,48 +40,48 @@ const InfoCard = () => {
   return (
     <div className="InfoCard">
       <div className="infoHead">
-        <h4>Profile Info</h4>
-        {/* IMPORTANT: THIS IS WHAT MAKES THE PEN ICON APPEAR */}
-        {user._id === profileUserId ? (
-          <div>
-            <UilPen
-              width="2rem"
-              height="1.2rem"
-              onClick={() => setModalOpened(true)}
-            />
-            <ProfileModal
-              modalOpened={modalOpened}
-              setModalOpened={setModalOpened}
-              data = {user}
-            />
-          </div>
-        ) : (
-          ""
-        )}
+        <h4>Project Info</h4>
       </div>
 
       <div className="info">
         <span style={{ color: "lightgray" }}>
-          <b>Name: </b>
+          <b>COM S 319 Construction of User Interfaces, Spring 2024</b>
         </span>
-        <span style={{ color: "lightgray" }}>{user.firstname} {user.lastname}</span>
       </div>
       <div className="info">
         <span style={{ color: "lightgray" }}>
-          <b>Phone #: </b>
+          <b>Date: </b>
         </span>
-        <span style={{ color: "lightgray" }}>{profileUser.phoneNumber}</span>
+        <span style={{ color: "lightgray" }}>May 7, 2024</span>
       </div>
       <div className="info">
         <span style={{ color: "lightgray" }}>
-          <b>Username: </b>
+          <b>Group members: </b>
         </span>
-        <span style={{ color: "lightgray" }}>{user.username}</span>
+        {/* Two circular images */}
+        <div className="circular-images">
+          <img
+            src= {Michael}
+            alt="Michael Rubenacker"
+            className="circular-img"
+          />
+          <img
+            src= {Andy}
+            alt="Andy Drafahl"
+            className="circular-img"
+          />
+        </div>
+        <span style={{ color: "lightgray" }}>Michael Rubenacker; mrube@iastate.edu and Andy Drafahl; acd7@iastate.edu</span>
+      </div>
+      <div className="info">
+        <span style={{ color: "lightgray" }}>
+          <b>Instructor: </b>
+        </span>
+        <span style={{ color: "lightgray" }}>Dr. Abraham N. Aldaco Gastelum; aaldaco@iastate.edu</span>
       </div>
 
-      <button className="button logout-button" onClick={handleLogOut}>Log Out</button>
     </div>
   );
 };
 
-export default InfoCard;
+export default ProjectInfo;
