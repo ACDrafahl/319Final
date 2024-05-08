@@ -112,7 +112,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
             onChange={handleChange}
             type="text"
             placeholder="Username"
-            name="livesIn"
+            name="username"
             className="infoInput"
           />
         </div>
