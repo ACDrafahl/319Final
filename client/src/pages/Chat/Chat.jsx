@@ -107,11 +107,7 @@ const Chat = () => {
           setSendMessage={setSendMessage} 
           receivedMessage={receivedMessage}
         />
-      </div>
-
-
-      <InfoCard/>
-      
+      </div>   
     </div>
 
 

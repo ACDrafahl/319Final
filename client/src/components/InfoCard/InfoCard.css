@@ -5,7 +5,7 @@
     background-color: black;
     padding: 1rem;
     border-radius: 1rem;
-    width: 100%;  /* Stretches across the entire width */
+    width: 97%;  /* Stretches across the entire width */
     outline: 3px solid white;
     max-width: 100%;  /* Ensures it doesn't exceed the parent container */
   }
