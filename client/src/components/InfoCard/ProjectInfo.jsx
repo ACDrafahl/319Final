@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import * as UserApi from "../../api/UserRequests.js";
 import { logout } from "../../actions/AuthActions.js";
+import Michael from "../../img/Michael.jpg";
+import Andy from "../../img/Andy.jpg";
 
 
 const ProjectInfo = () => {
@@ -56,6 +58,19 @@ const ProjectInfo = () => {
         <span style={{ color: "lightgray" }}>
           <b>Group members: </b>
         </span>
+        {/* Two circular images */}
+        <div className="circular-images">
+          <img
+            src= {Michael}
+            alt="Michael Rubenacker"
+            className="circular-img"
+          />
+          <img
+            src= {Andy}
+            alt="Andy Drafahl"
+            className="circular-img"
+          />
+        </div>
         <span style={{ color: "lightgray" }}>Michael Rubenacker; mrube@iastate.edu and Andy Drafahl; acd7@iastate.edu</span>
       </div>
       <div className="info">
