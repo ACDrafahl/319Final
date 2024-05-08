@@ -94,7 +94,7 @@ const InfoCard = () => {
         Log Out
       </button>
       <button className="button delete-button" onClick={handleDelete}>
-        Delete User
+        Delete Account
       </button>
     </div>
   );
