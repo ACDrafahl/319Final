@@ -3,6 +3,7 @@ import "./RightSide.css";
 
 import NavIcons from "../NavIcons/NavIcons";
 const RightSide = () => {
+  const [modalOpened, setModalOpened] = useState(false);
 
   return (
     <div className="RightSide">

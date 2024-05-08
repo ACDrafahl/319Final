@@ -29,6 +29,8 @@ const UserSchema = mongoose.Schema(
     phoneNumber: String,
     relationship: String,
     country: String,
+    followers: [],
+    following: [],
   },
   { timestamps: true }
 );
