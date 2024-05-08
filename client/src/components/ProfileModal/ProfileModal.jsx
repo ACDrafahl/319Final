@@ -3,7 +3,6 @@ import { Modal, useMantineTheme } from "@mantine/core";
 import "./ProfileModal.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { uploadImage } from "../../actions/UploadAction";
 import { updateUser } from "../../actions/UserAction";
 
 const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
@@ -40,7 +39,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
       data.append("file", profileImage);
       UserData.profilePicture = fileName;
       try {
-        dispatch(uploadImage(data));
+        //dispatch(uploadImage(data));
       } catch (err) {
         console.log(err);
       }
@@ -52,7 +51,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
       data.append("file", coverImage);
       UserData.coverPicture = fileName;
       try {
-        dispatch(uploadImage(data));
+        //dispatch(uploadImage(data));
       } catch (err) {
         console.log(err);
       }
@@ -113,7 +112,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
             onChange={handleChange}
             type="text"
             placeholder="Username"
-            name="livesIn"
+            name="username"
             className="infoInput"
           />
         </div>
