@@ -97,7 +97,7 @@ useEffect(()=> {
             <div className="chat-header">
               <div className="follower">
                 <div>
-                  <img
+                  {/* <img
                     src={
                       userData?.profilePicture
                         ? process.env.REACT_APP_PUBLIC_FOLDER +
@@ -108,8 +108,8 @@ useEffect(()=> {
                     alt="Profile"
                     className="followerImage"
                     style={{ width: "50px", height: "50px" }}
-                  />
-                  <div className="name" style={{ fontSize: "0.9rem" }}>
+                  /> */}
+                  <div className="name top-of-box" style={{ fontSize: "0.9rem" }}>
                     <span>
                       {userData?.firstname} {userData?.lastname}
                     </span>
@@ -143,24 +143,24 @@ useEffect(()=> {
             </div>
             {/* chat-sender */}
             <div className="chat-sender">
-              <div onClick={() => imageRef.current.click()}>+</div>
+              {/* <div onClick={() => imageRef.current.click()}>+</div> */}
               <InputEmoji
                 value={newMessage}
                 onChange={handleChange}
               />
-              <div className="send-button button" onClick = {handleSend}>Send</div>
-              <input
+              <div className="send-button button custom-send-button" onClick = {handleSend}>Send</div>
+              {/* <input
                 type="file"
                 name=""
                 id=""
                 style={{ display: "none" }}
                 ref={imageRef}
-              />
+              /> */}
             </div>{" "}
           </>
         ) : (
           <span className="chatbox-empty-message">
-            Tap on a chat to start conversation...
+            Tap a chat or start a new conversation...
           </span>
         )}
       </div>

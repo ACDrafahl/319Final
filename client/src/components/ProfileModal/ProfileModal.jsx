@@ -73,9 +73,10 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
       size="55%"
       opened={modalOpened}
       onClose={() => setModalOpened(false)}
+  
     >
       <form className="infoForm" onSubmit={handleSubmit}>
-        <h3>Your Info</h3>
+        <span style={{ color: "black" }}><h3>Your Info</h3></span>
         <div>
           <input
             value={formData.firstname}
@@ -97,51 +98,26 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
 
         <div>
           <input
-            value={formData.worksAt}
+            value={formData.phoneNumber}
             onChange={handleChange}
             type="text"
-            placeholder="Works at"
-            name="worksAt"
+            placeholder="Phone Number"
+            name="phoneNumber"
             className="infoInput"
           />
         </div>
 
         <div>
           <input
-            value={formData.livesIn}
+            value={formData.username}
             onChange={handleChange}
             type="text"
-            placeholder="Lives in"
+            placeholder="Username"
             name="livesIn"
             className="infoInput"
           />
-          <input
-            value={formData.country}
-            onChange={handleChange}
-            type="text"
-            placeholder="Country"
-            name="country"
-            className="infoInput"
-          />
         </div>
 
-        <div>
-          <input
-            value={formData.relationship}
-            onChange={handleChange}
-            type="text"
-            className="infoInput"
-            placeholder="Relationship status"
-            name="relationship"
-          />
-        </div>
-
-        <div>
-          Profile image
-          <input type="file" name="profileImage" onChange={onImageChange} />
-          Cover image
-          <input type="file" name="coverImage" onChange={onImageChange} />
-        </div>
 
         <button className="button infoButton" type="submit">
           Update

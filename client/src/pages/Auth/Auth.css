@@ -13,8 +13,6 @@
   justify-content: center;
 }
 
-
-
 /* left side */
 .a-left{
     gap: 2rem;
@@ -26,22 +24,17 @@
 }
 
 .Webname > h1 {
-    font-size: 3rem;
-    background-color: red;
-  
-    /* Create the gradient. */
-    background-image: var(--buttonBg);
-    
-    /* Set the background size and repeat properties. */
-    background-size: 100%;
-    background-repeat: repeat;
-  
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 50 !important; /* Force a thin font */
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+}
+
+.CompanyName {
+  font-size: .8rem;
+  font-family: 'Arial', sans-serif;
+  font-weight: 50 !important; /* Force a thin font */
+  color: white;
 }
 
 .Webname>h6{
@@ -54,9 +47,10 @@
 
 
 .authForm{
-    background-color: var(--cardColor);
+    background-color: #000000;
     border-radius: 1rem;
     padding: 1rem;
+    border: 3px solid #ffffff;
 }
 
 .authForm>div{

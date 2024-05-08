@@ -5,20 +5,21 @@
 }
 
 
-.navIcons{
+.navIcons {
     margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Align icons to the right */
+    gap: 1rem; /* Add a consistent distance between icons */
 }
 
 .navIcons>a>img{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .navIcons>img{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .navIcons>img:hover{

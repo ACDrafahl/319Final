@@ -10,6 +10,7 @@ const Auth = () => {
     firstname: "",
     lastname: "",
     username: "",
+    phoneNumber: "", // Added phone number field
     password: "",
     confirmpass: "",
   };
@@ -17,12 +18,8 @@ const Auth = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignUp, setIsSignUp] = useState(false);
-
   const [data, setData] = useState(initialState);
-
   const [confirmPass, setConfirmPass] = useState(true);
-
-  // const dispatch = useDispatch()
 
   // Reset Form
   const resetForm = () => {
@@ -30,7 +27,7 @@ const Auth = () => {
     setConfirmPass(confirmPass);
   };
 
-  // handle Change in input
+  // Handle Change in input
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
@@ -51,18 +48,14 @@ const Auth = () => {
   return (
     <div className="Auth">
       {/* left side */}
-
       <div className="a-left">
         <img src={Logo} alt="" />
-
         <div className="Webname">
-          <h1>ZKC Media</h1>
-          <h6>Explore the ideas throughout the world</h6>
+          <h1>MinimalMessaging</h1>
         </div>
       </div>
 
       {/* right form side */}
-
       <div className="a-right">
         <form className="infoForm authForm" onSubmit={handleSubmit}>
           <h3>{isSignUp ? "Register" : "Login"}</h3>
@@ -88,7 +81,6 @@ const Auth = () => {
               />
             </div>
           )}
-
           <div>
             <input
               required
@@ -100,6 +92,20 @@ const Auth = () => {
               onChange={handleChange}
             />
           </div>
+          {/* Added phone number field */}
+          {isSignUp && (
+            <div>
+              <input
+                required
+                type="text"
+                placeholder="Phone Number"
+                className="infoInput"
+                name="phoneNumber"
+                value={data.phoneNumber}
+                onChange={handleChange}
+              />
+            </div>
+          )}
           <div>
             <input
               required
@@ -121,7 +127,6 @@ const Auth = () => {
               />
             )}
           </div>
-
           <span
             style={{
               color: "red",
@@ -139,6 +144,7 @@ const Auth = () => {
                 fontSize: "12px",
                 cursor: "pointer",
                 textDecoration: "underline",
+                color: "white"
               }}
               onClick={() => {
                 resetForm();
@@ -146,15 +152,15 @@ const Auth = () => {
               }}
             >
               {isSignUp
-                ? "Already have an account Login"
-                : "Don't have an account Sign up"}
+                ? "Already have an account?  Login"
+                : "Don't have an account?  Sign up"}
             </span>
             <button
               className="button infoButton"
               type="Submit"
               disabled={loading}
             >
-              {loading ? "Loading..." : isSignUp ? "SignUp" : "Login"}
+              {loading ? "Loading..." : isSignUp ? "Sign Up" : "Login"}
             </button>
           </div>
         </form>

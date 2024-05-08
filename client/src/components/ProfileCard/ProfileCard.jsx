@@ -1,7 +1,5 @@
 import React from "react";
 import "./ProfileCard.css";
-import Cover from "../../img/cover.jpg";
-import Profile from "../../img/profileImg.jpg";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const ProfileCard = ({location}) => {
@@ -11,7 +9,7 @@ const ProfileCard = ({location}) => {
 
   return (
     <div className="ProfileCard">
-      <div className="ProfileImages">
+      {/* <div className="ProfileImages">
         <img src={
             user.coverPicture
               ? serverPublic + user.coverPicture
@@ -25,13 +23,13 @@ const ProfileCard = ({location}) => {
           }
           alt="ProfileImage"
         />
-      </div>
+      </div> */}
       <div className="ProfileName">
         <span>{user.firstname} {user.lastname}</span>
-        <span>{user.worksAt? user.worksAt : 'Write about yourself'}</span>
+        <span>{user.phoneNumber? user.phoneNumber : ''}</span>
       </div>
 
-      <div className="followStatus">
+      {/* <div className="followStatus">
         <hr />
         <div>
           <div className="follow">
@@ -43,7 +41,6 @@ const ProfileCard = ({location}) => {
             <span>{user.following.length}</span>
             <span>Following</span>
           </div>
-          {/* for profilepage */}
           {location === "profilePage" && (
             <>
               <div className="vl"></div>
@@ -57,7 +54,7 @@ const ProfileCard = ({location}) => {
           )}
         </div>
         <hr />
-      </div>
+      </div> */}
 
       {location === "profilePage" ? (
         ""
