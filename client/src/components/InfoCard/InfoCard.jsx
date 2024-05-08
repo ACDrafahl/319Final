@@ -67,21 +67,15 @@ const InfoCard = () => {
       </div>
       <div className="info">
         <span style={{ color: "lightgray" }}>
-          <b>Status: </b>
-        </span>
-        <span style={{ color: "lightgray" }}>{profileUser.relationship}</span>
-      </div>
-      <div className="info">
-        <span style={{ color: "lightgray" }}>
-          <b>Lives in: </b>
-        </span>
-        <span style={{ color: "lightgray" }}>{profileUser.livesIn}</span>
-      </div>
-      <div className="info">
-        <span style={{ color: "lightgray" }}>
           <b>Phone #: </b>
         </span>
         <span style={{ color: "lightgray" }}>{profileUser.worksAt}</span>
+      </div>
+      <div className="info">
+        <span style={{ color: "lightgray" }}>
+          <b>Username: </b>
+        </span>
+        <span style={{ color: "lightgray" }}>{user.username}</span>
       </div>
 
       <button className="button logout-button" onClick={handleLogOut}>Log Out</button>

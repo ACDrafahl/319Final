@@ -65,7 +65,6 @@ const ProjectInfo = () => {
         <span style={{ color: "lightgray" }}>Dr. Abraham N. Aldaco Gastelum; aaldaco@iastate.edu</span>
       </div>
 
-      <button className="button logout-button" onClick={handleLogOut}>Log Out</button>
     </div>
   );
 };
