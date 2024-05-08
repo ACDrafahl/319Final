@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import * as UserApi from "../../api/UserRequests.js";
 import { logout } from "../../actions/AuthActions";
 
+
 const InfoCard = () => {
   const dispatch = useDispatch()
   const params = useParams();
@@ -39,6 +40,7 @@ const InfoCard = () => {
     <div className="InfoCard">
       <div className="infoHead">
         <h4>Profile Info</h4>
+        {/* IMPORTANT: THIS IS WHAT MAKES THE PEN ICON APPEAR */}
         {user._id === profileUserId ? (
           <div>
             <UilPen
