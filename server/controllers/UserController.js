@@ -2,7 +2,8 @@ import UserModel from "../models/userModel.js";
 
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken'
-// Get a User
+
+// Get a user
 export const getUser = async (req, res) => {
   const id = req.params.id;
 
@@ -30,6 +31,29 @@ export const getAllUsers = async (req, res) => {
       return otherDetails
     })
     res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+};
+
+// Get a user by their phone number -- used when a user clicks "New Chat"
+export const getUserByPhoneNumber = async (req, res) => {
+  const phoneNumber = req.params.phoneNumber;
+
+  try {
+    const user = await UserModel.findOne({ phoneNumber: phoneNumber });
+    if (user) {
+      const { password, ...otherDetails } = user._doc;
+
+      const token = jwt.sign(
+        { username: user.username, id: user._id },
+        process.env.JWTKEY,
+        { expiresIn: "1h" }
+      );
+      res.status(200).json({ otherDetails, token });
+    } else {
+      res.status(404).json("No such User");
+    }
   } catch (error) {
     res.status(500).json(error);
   }

@@ -79,7 +79,7 @@ const InfoCard = () => {
         <span style={{ color: "lightgray" }}>
           <b>Phone #: </b>
         </span>
-        <span style={{ color: "lightgray" }}>{profileUser.worksAt}</span>
+        <span style={{ color: "lightgray" }}>{profileUser.phoneNumber}</span>
       </div>
 
       <button className="button logout-button" onClick={handleLogOut}>Log Out</button>

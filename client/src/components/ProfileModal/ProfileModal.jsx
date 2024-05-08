@@ -98,11 +98,11 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
 
         <div>
           <input
-            value={formData.worksAt}
+            value={formData.phoneNumber}
             onChange={handleChange}
             type="text"
             placeholder="Phone Number"
-            name="worksAt"
+            name="phoneNumber"
             className="infoInput"
           />
         </div>
